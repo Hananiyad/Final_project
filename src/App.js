@@ -1,9 +1,7 @@
 import React from 'react';
 function App() {
     return(
-        <>
-        helloworld
-        </>
+        <>hello world</>
     );
 }
 export default App ;
