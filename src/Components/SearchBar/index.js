@@ -1,4 +1,5 @@
 import React  from "react";
+import { func, string } from 'prop-types';
 import { InputBase, IconButton, Paper } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import './style.css'
@@ -18,6 +19,12 @@ function SearchBar({ value, onChange, onSearch }) {
       </Paper>
       
     );
+    
   }
+  SearchBar.propTypes = {
+    onClick: func.isRequired,
+    onChange: func.isRequired,
+    value: string.isRequired,
+  };
   export default SearchBar 
   
