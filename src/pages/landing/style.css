@@ -1,0 +1,32 @@
+.root{
+    width: 85%;
+    padding-bottom: 3em;
+  }
+#hearder{
+         display: flex;
+        justify-content: center;
+        align-items: flex-end;
+       padding-bottom: 5em;
+        min-height: 450px;
+        background-image:url('./Group\ 170.png');
+        background-position: center;
+        background-size: cover;
+        
+}
+#hero{
+  margin: 90px;
+  font-size: 38px;
+  display: flex;
+  text-align: center;
+  color: aliceblue;
+}
+#housesSection{
+padding-top: 2em;
+}
+#sectionTitle{
+  font-size: 22px;
+ font-weight: bolder;
+  color:#344F96;
+  width: 200px;
+  margin-left: 3em;
+}
