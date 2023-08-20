@@ -1,12 +1,15 @@
 import React from 'react';
-import layout  from '../pages/layout'
-import ResponsiveAppBar from '../Components/NavBar'
+import Layout from'../Pages/Layout';
+import Landing from '../Pages/Landing'
+
 
 function App() {
-    return(
-        <ResponsiveAppBar/> 
+  return (
+    <Layout className="App">
+    <Landing/>
 
-        );
+    </Layout>
+  );
 }
 
 export default App;

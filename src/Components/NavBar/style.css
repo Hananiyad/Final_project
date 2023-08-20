@@ -1,3 +1,32 @@
-.logo{
-    color:#FF8243;
+#root {
+  background-color: #eee9e7;
+  height: 80;
+  justify-content: center;
+  align-items: center;
+}
+.toolBar {
+  width: 85%;
+  margin: 0 0;
+}
+#logo {
+  flex-grow: 0.5;
+  color: #FF8243;
+  font-weight: bold;
+}
+#page{
+  color: #A78777;
+ padding: 30px;
+}
+#btn{
+  color: #FF8243;
+  padding: 30px;
+}
+#btn1{
+  background:#FF8243;
+  border-radius: 40px;
+  color: #fff;
+    border: 2px solid transparent;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.71rem 1.70rem;
 }
