@@ -6,9 +6,10 @@
          display: flex;
         justify-content: center;
         align-items: flex-end;
+        flex-direction: column;
        padding-bottom: 5em;
         min-height: 450px;
-        background-image:url('./Group\ 170.png');
+        background-image:url('../../Utils/images/Group\ 170.png');
         background-position: center;
         background-size: cover;
         
@@ -29,4 +30,9 @@ padding-top: 2em;
   color:#344F96;
   width: 200px;
   margin-left: 3em;
+}
+#search{
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
