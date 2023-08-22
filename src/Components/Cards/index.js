@@ -12,8 +12,17 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import './style.css'
 
 
-export default function MediaCard({house}) {
-    const { title, bathroom,bedroom,location,description,price,image  } = house;
+export default function Cards({houses}) {
+    const {
+    id,
+    title,
+    location,
+    bedroom,
+    bathroom,
+     description,
+    price,
+    image,
+  } = houses;
     return (
     <Card sx={{ maxWidth: 345 }}  id="root">
       <CardMedia
