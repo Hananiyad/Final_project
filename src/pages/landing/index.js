@@ -3,6 +3,7 @@ import {useState,useEffect} from 'react'
 import Typography from '@mui/material/Typography';
 import CustomizedInputBase from '../../Components/SearchBar';
 import CardContainer from "../../Components/CardContainer";
+
 import'./style.css';
 
 const Landing =()=>{
@@ -22,7 +23,6 @@ const Landing =()=>{
 
     return(
         
-    <>
      <div id='hearder'>
       {console.log(houses, "hhoi")}
      <Typography  variant="h3"
@@ -32,16 +32,16 @@ const Landing =()=>{
        >Let Find a Home Thats Perfact for you</Typography>
        <CustomizedInputBase id='search'/>
       </div>
-      
-      
+
       <div id='housesSection'>
               <Typography variant="h2" id='sectionTitle'>
               Arrivals
               </Typography>
               </div>
       <CardContainer houses={houses}/>
-        </>
+       
     )
 
 }
+
 export default Landing 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -9,6 +10,7 @@ import Grid from '@mui/material/Grid';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import BedIcon from '@mui/icons-material/Bed';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 import './style.css'
 
 
@@ -25,7 +27,7 @@ export default function Cards({houses}) {
   } = houses;
     return (
     <Card sx={{ maxWidth: 345 }}  id="root">
-      <CardMedia
+      <CardMedia  
         sx={{ height: 140 }}
         image= {image}
       />
@@ -45,7 +47,7 @@ export default function Cards({houses}) {
     </Typography>
       </CardContent>
       <CardActions>
-      <Button size="small">Learn More</Button>
+      <Link to={`/details/${id}`}>Learn More</Link>
       </CardActions>
     </Card>
   );
