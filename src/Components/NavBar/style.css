@@ -17,6 +17,9 @@
   color: #A78777;
  padding: 30px;
 }
+#page:hover{
+   border-bottom: 2px solid #A78777;
+}
 #btn{
   color: #FF8243;
   padding: 30px;

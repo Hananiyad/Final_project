@@ -5,9 +5,10 @@
 #hearder{
          display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         flex-direction: column;
        padding-bottom: 5em;
+       width: 100%;
         min-height: 450px;
         background-image:url('../../Utils/images/Group\ 170.png');
         background-position: center;
@@ -15,7 +16,7 @@
         
 }
 #hero{
-  margin: 90px;
+  margin: 30px;
   font-size: 38px;
   display: flex;
   text-align: center;
