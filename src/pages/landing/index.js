@@ -22,8 +22,8 @@ const Landing =()=>{
   }, []);
 
     return(
-        
-     <div id='hearder'>
+      <>
+           <div id='hearder'>
       {console.log(houses, "hhoi")}
      <Typography  variant="h3"
       component="h2"
@@ -39,9 +39,12 @@ const Landing =()=>{
               </Typography>
               </div>
       <CardContainer houses={houses}/>
+      </>
+        
+
        
     )
 
 }
 
-export default Landing 
+export default Landing ;
