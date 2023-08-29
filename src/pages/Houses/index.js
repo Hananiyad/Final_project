@@ -51,12 +51,14 @@ const SearchBar =()=>{
   const handleSearch = (event) => {
       event.preventDefault();
       const filteredHouses = housesData.filter((house) =>
-          (bedroom === undefined || house.bedroom === +bedroom))
-          .filter((house) => (bathroom === undefined || house.bathroom === +bathroom))
-          .filter((house) => (selectedType === '' || house.category === selectedType))
-          .filter((house) => (price === undefined || house.price === +price))
-          .filter((house) => (location === '' || house.location.toLowerCase().includes(location.toLowerCase())));
+          (bedroom ? house.bedroom === +bedroom : true))
+          .filter((house) => (bathroom ? house.bathroom === +bathroom : true))
+          .filter((house) => (selectedType === '' ? house.category === selectedType : true))
+          .filter((house) => (price === undefined ? house.price === +price : true))
+          .filter((house) => (location? house.location.toLowerCase().includes(location.toLowerCase()) : true));
       setFilteredHouses(filteredHouses);
+            console.log(filteredHouses, 98984);
+
   };
   const handleResetFilter = () => {
       setLocation('');
@@ -153,8 +155,8 @@ const SearchBar =()=>{
         aria-label="range-slider"
         value={price}
         step={100}
-        min={700}
-        max={1500}
+        min={1000}
+        max={7000}
         variant="outlined"
       />   
 
