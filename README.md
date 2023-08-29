@@ -23,8 +23,10 @@ As a user, I can see all available houses that able to rent, search to find hous
 <https://www.figma.com/file/XFKuibAvCSjZJXO6YuRM1L/House-Hunting?type=design&node-id=0%3A1&mode=design&t=gkD1OI0VscSVUkTc-1>
 
 # Technologies 💻
+
 **UX/UI Technology:**
 - Figma design tool .
+
   
 **Front-end Technology:**
 - ReactJS (Hooks).
