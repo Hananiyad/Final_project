@@ -15,6 +15,8 @@ Build a house-hunting application that facilitates users to rent houses, most of
 - I can see all available houses to rent
 - I want to search by different locations, prices and the number of room in the house
 - I can add houses to my favourite list
-
+  
+# User Journey ✈️
+As a user, I can see all available houses that able to rent, search to find houses  inside my profile I have my information and control panel for my own houses available to rent.
 
 
