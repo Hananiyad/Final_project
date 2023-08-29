@@ -7,8 +7,8 @@ Most of those who intend to get married or who are looking for a house find it v
 # Solution 💡
 Build a house-hunting application that facilitates users to rent houses, most of who looking for a house faced some difficulties, help to choose a suitable house.
 # User Stories 📖
-**As a renter and rented user:**
 
+**As a renter and rented user:**
 I can Sign up into the app
 I can log in into the app
 I can see all available houses to rent
