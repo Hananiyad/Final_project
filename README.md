@@ -25,6 +25,7 @@ As a user, I can see all available houses that able to rent, search to find hous
 # Technologies 💻
 **UX/UI Technology:**
 - Figma design tool .
+  
 **Front-end Technology:**
 - ReactJS (Hooks).
 - Material UI
