@@ -1,21 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Landing from '../pages/landing';
-import Layout from '../pages/layout';
-import Detail from '../pages/DetailsHouse';
-import Houses from '../pages/Houses';
-import AboutUs from '../pages/AboutUs';
-import NotFound from '../pages/NotFound';
+import { Route, Routes } from 'react-router-dom';
+import Landing from '../Pages/Landing';
+import Layout from '../Pages/Layout';
+import Detail from '../Pages/DetailsHouse';
+import Houses from '../Pages/Houses';
+import AboutUs from '../Pages/AboutUs';
+import NotFound from '../Pages/NotFound';
 import SearchBar from '../Components/SearchBar';
-import Login from '../pages/Login';
-import Register from '../pages/Register';
-
-
+import Login from '../Pages/Login';
+import Register from '../Pages/Register';
 
 
 function App() {
   return (
-    <Router>
     <Layout>
       <Routes>
         <Route exact path='/' element={<Landing/>}/>
@@ -26,12 +23,8 @@ function App() {
         <Route  exact path='/login' element={<Login/>}/>
         <Route exact path='/register' element={<Register/>}/>
         <Route exact path='*' element={<NotFound/>}/>
-       
-  
       </Routes>
-   
     </Layout>
-    </Router>
   );
 }
 

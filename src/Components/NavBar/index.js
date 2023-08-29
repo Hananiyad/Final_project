@@ -41,7 +41,11 @@ function NavBar() {
   };
   const handleSignUp = () => {
     navigate('/register');
+    navigate('/Login');
+
   }
+
+  
 
   return (
     <AppBar position="static" id="root" >
@@ -138,7 +142,7 @@ function NavBar() {
           <Button variant="outlined" id="btn" onClick = {handleSignUp} > Sign Up
             {/* <Link to ='/login'></Link> */}
             </Button>
-          <Button variant="contained" id="btn1"> Sign In
+          <Button variant="contained" id="btn1"  onClick = {handleSignUp}> Sign In
             {/* <Link to ='/register'></Link> */}
           </Button>
        

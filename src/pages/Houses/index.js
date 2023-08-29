@@ -3,13 +3,11 @@ import FormControl from '@mui/material/FormControl';
 import InputBase from '@mui/material/InputBase';
 import Button from '@mui/material/Button';
 import { TextField,Slider } from '@mui/material';
-import { locationFilter, categoryFilter } from '../../Utils/staitcadata';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import CardContainer from '../../Components/CardContainer';
 import FormLabel from '@mui/material/FormLabel';
-import MenuItem from '@mui/material/MenuItem';
 
 import './style.css'
 

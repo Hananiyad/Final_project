@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Snackbar from '@mui/material/Snackbar';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import validationSchema from '../../Utils/validations/login';
 import Input from '../../Components/Input';
 import Alert from '@mui/material/Alert';
@@ -57,7 +58,7 @@ function Login() {
 return (
     <div id='root'>
       <div id='img'>
-        <SearchImg id='logo' width="250" />
+        {/* <SearchImg id='logo' width="250" /> */}
       </div>
       <div id='formSection'>
         <Typography id='header'>
