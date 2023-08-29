@@ -1,6 +1,5 @@
 #root {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: flex-start;
     box-sizing: border-box;
     margin: auto;
