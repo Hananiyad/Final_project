@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -58,7 +58,7 @@ export default function cards({houses}) {
       </CardContent>
       <CardActions id='learn-contanier'>
         <div id='cardTitle-contaier'> 
-        <Link to={`/details/${id}`} id='learn'>More Detalil</Link>
+        {/* <Link to={`/details/${id}`} id='learn'>More Detalil</Link> */}
            <Typography gutterBottom variant="h5" component="div" id='price'>
         {price+"$"}
         </Typography>

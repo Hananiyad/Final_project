@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { ReactComponent as Image } from '../../Utils/images/notFound.svg';
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import './style.css'
 
 function NotFound() {
@@ -22,7 +22,7 @@ function NotFound() {
             variant="outlined"
             color="secondary"
           >
-           <Link to='/' id='link'>Back To Home</Link>
+           {/* <Link to='/' id='link'>Back To Home</Link> */}
           </Button>
         </div>
       );

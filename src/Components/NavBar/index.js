@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useNavigate } from "react-router-dom";
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,12 +14,14 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './style.css';
 const pages = ['Home', 'About Us', 'Content Us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
+    const navigate = useNavigate();
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -35,6 +39,9 @@ function NavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const handleSignUp = () => {
+    navigate('/register');
+  }
 
   return (
     <AppBar position="static" id="root" >
@@ -128,10 +135,12 @@ function NavBar() {
               </Button>
             ))}
           </Box>
-          <Button variant="outlined" id="btn">
-            <Link to ='/login'>Sign Up</Link>
+          <Button variant="outlined" id="btn" onClick = {handleSignUp} > Sign Up
+            {/* <Link to ='/login'></Link> */}
             </Button>
-          <Button variant="contained" id="btn1"><Link to ='/register'>Sign In</Link></Button>
+          <Button variant="contained" id="btn1"> Sign In
+            {/* <Link to ='/register'></Link> */}
+          </Button>
        
         </Toolbar>
       </Container>
