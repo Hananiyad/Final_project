@@ -8,7 +8,7 @@ function Footer() {
       <AppBar position="static" id='footer' >
         <Container maxWidth="lg">
           <Toolbar>
-            <Typography variant="body1"  >
+            <Typography variant="body1" id='foot' >
               © 2023 House Hunting . all copyright reserved
             </Typography>
           </Toolbar>

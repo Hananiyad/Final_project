@@ -11,8 +11,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import{Link} from 'react-router-dom'
+
+import { Link } from 'react-router-dom';
 import './style.css';
 const pages = ['Home', 'About Us', 'Content Us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -38,6 +38,7 @@ function NavBar() {
 
   return (
     <AppBar position="static" id="root" >
+     
       <Container maxWidth="lg">
         <Toolbar disableGutters id="toolBar">
           <Typography
@@ -127,11 +128,16 @@ function NavBar() {
               </Button>
             ))}
           </Box>
-          <Button variant="text" id="btn">Sing Up</Button>
-          <Button variant="contained" id="btn1">log in</Button>
+          <Button variant="outlined" id="btn">
+            <Link to ='/login'>Sign Up</Link>
+            </Button>
+          <Button variant="contained" id="btn1"><Link to ='/register'>Sign In</Link></Button>
+       
         </Toolbar>
       </Container>
+    
     </AppBar>
+    
   );
 }
 export default NavBar;

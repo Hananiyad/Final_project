@@ -7,19 +7,27 @@
 }
 #num{
     font-size: 4rem;
+    color: #000;
 }
 #text{
-    margin-bottom: 40;
+    margin-bottom: 40px;
     font-weight:bold;
     font-size: 1.5rem;
+    color: #000;
 }
 #img{
     align-self: center;
     min-width:50%;
-    height: 350;
+    height: 150px;
   }
   #button{
     width: 500;
-    margin-bottom: 20;
-    margin-top: 40;
+    margin-top: 70px;
+    background-color: #EB9235;
+    
   }
+   #link{
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+   }

@@ -1,13 +1,10 @@
-.root{
-    width: 85%;
-    padding-bottom: 3em;
-  }
+
 #hearder{
          display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-       padding-bottom: 5em;
+       padding-bottom: 6em;
        width: 100%;
         min-height: 450px;
         background-image:url('../../Utils/images/Group\ 170.png');
@@ -16,21 +13,26 @@
         
 }
 #hero{
-  margin: 30px;
+  margin: 40px;
+margin-top: 10rem; 
   font-size: 38px;
   display: flex;
   text-align: center;
   color: aliceblue;
 }
+
 #housesSection{
-padding-top: 2em;
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #sectionTitle{
-  font-size: 22px;
+  font-size: 3rem;
  font-weight: bolder;
-  color:#344F96;
-  width: 200px;
-  margin-left: 3em;
+  color:#A78777;
+  margin-bottom: 30px;
 }
 #search{
  display: flex;

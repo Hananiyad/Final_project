@@ -1,8 +1,8 @@
-import React  from "react";
-import {useState,useEffect} from 'react'
+import React , {useState,useEffect} from "react";
 import Typography from '@mui/material/Typography';
 import CustomizedInputBase from '../../Components/SearchBar';
 import CardContainer from "../../Components/CardContainer";
+
 
 import'./style.css';
 
@@ -23,7 +23,7 @@ const Landing =()=>{
 
     return(
       <>
-           <div id='hearder'>
+     <div id='hearder'>
       {console.log(houses, "hhoi")}
      <Typography  variant="h3"
       component="h2"
@@ -35,10 +35,23 @@ const Landing =()=>{
 
       <div id='housesSection'>
               <Typography variant="h2" id='sectionTitle'>
-              Arrivals
+              Top-Rated
               </Typography>
+              <CardContainer
+                  houses={houses.sort((a, b) => a.rating - b.rating)}
+                />
               </div>
-      <CardContainer houses={houses}/>
+              
+         <div id="housesSection">
+              <Typography variant="h2" id='sectionTitle'>
+                Newest
+              </Typography>
+  
+                <CardContainer houses={houses} />
+              
+            </div>
+
+             
       </>
         
 

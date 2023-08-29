@@ -6,15 +6,15 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import DirectionsIcon from '@mui/icons-material/Directions';
-import { useNavigate } from 'react-router-dom';
+ import { useNavigate } from 'react-router-dom';
 import './style.css'
 
-export default function CustomizedInputBase() {
+export default function SearchBar() {
 
   const navigate = useNavigate();
 
     const navToSearch=()=>{
-      <Navigate to="/search" />   
+      navigate('/houses')  
     }
 
 
@@ -30,8 +30,8 @@ export default function CustomizedInputBase() {
         inputProps={{ 'aria-label': 'search google maps' }}
        
       />
-      <IconButton type="button" sx={{ p: '10px' }} aria-label="search" onClick={navToSearch} >
-        <SearchIcon id='icon'/>
+      <IconButton type="button" sx={{ p: '10px' }} aria-label="search" onClick={""} >
+        <SearchIcon id='icon' onClick={navToSearch}/>
       </IconButton >
     </Paper>
   ); 

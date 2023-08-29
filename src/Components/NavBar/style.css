@@ -1,16 +1,18 @@
+
 #root {
   background-color: #eee9e7;
-  /* height: 80; */
+  /* height: ; */
+  width: 100% !important;
   justify-content: center;
   align-items: center;
 }
 .toolBar {
-  width: 85%;
+  width: 100%;
   margin: 0 0;
 }
 #logo {
   flex-grow: 0.5;
-  color: #FF8243;
+  color: #EB9235;
   font-weight: bold;
 }
 #page{
@@ -20,16 +22,28 @@
 #page:hover{
    border-bottom: 2px solid #A78777;
 }
-#btn{
-  color: #FF8243;
-  padding: 30px;
+#btn {
+  
+  color: #A78777;
+  padding: 0.60rem 1.70rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin:0.60rem 1.70rem;
+  cursor: pointer;
+  border: 1px solid #EB9235 ;
+  border-radius: 10px;
 }
+
 #btn1{
-  background:#FF8243;
-  border-radius: 40px;
+  background:#EB9235;
+  border-radius: 10px;
   color: #fff;
-    border: 2px solid transparent;
-    font-weight: bold;
+  border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 10px;
     text-decoration: none;
-    padding: 0.71rem 1.70rem;
+    padding: 0.60rem 1.70rem;
 }
+
