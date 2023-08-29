@@ -2,8 +2,6 @@ import React , {useState,useEffect} from "react";
 import Typography from '@mui/material/Typography';
 import CustomizedInputBase from '../../Components/SearchBar';
 import CardContainer from "../../Components/CardContainer";
-
-
 import'./style.css';
 
 const Landing =()=>{

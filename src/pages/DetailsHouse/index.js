@@ -14,7 +14,7 @@ import BedIcon from '@mui/icons-material/Bed';
 import AddIcon from '@mui/icons-material/Add';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 // import RelatedHouse from './RelatedHouse';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './style.css'
 
@@ -91,14 +91,14 @@ fetch(`https://my-json-server.typicode.com/ansam-mohammed/api/houses/${id}`)
 
                   </Button>
                 
-                {/* <Link to='/'id='backLink'>
+                <Link to='/'id='backLink'>
                   Back
-                </Link> */}
+                </Link>
               </div>
             </Grid>
 
             <Grid lg="12" >
-            <RelatedHouse location={houses.location} />
+            
           </Grid>
            
         

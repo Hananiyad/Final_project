@@ -1,14 +1,19 @@
-
-#root {
-  background-color: #eee9e7;
-  /* height: ; */
+#rooot {
   width: 100% !important;
-  justify-content: center;
+  background-color: #eee9e7;
+  justify-content: space-around;
   align-items: center;
 }
-.toolBar {
+#toolBar {
   width: 100%;
+  color: #29170e;
   margin: 0 0;
+}
+#nav{
+  font-size: 10px;
+}
+#page{
+  font-size: 13px;
 }
 #logo {
   flex-grow: 0.5;
@@ -25,7 +30,7 @@
 #btn {
   
   color: #A78777;
-  padding: 0.60rem 1.70rem;
+  padding: 0.0rem 1.70rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;

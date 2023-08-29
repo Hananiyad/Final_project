@@ -1,106 +1,88 @@
-import React, { useState } from 'react';
-
-import Snackbar from '@mui/material/Snackbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import validationSchema from '../../Utils/validations/login';
-import Input from '../../Components/Input';
-import Alert from '@mui/material/Alert';
+import { useState, useEffect } from "react";
+// import image from '../../Components/Utilis/images/signin.png';
 import './style.css';
-
 function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-  
-
-
-    const clear = () => {
-        setEmail('');
-        setPassword('');
-    
-      };
-      const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-          return;
-        }
-     
-      };
-    
-      const handleEmail = (event) => {
-        setEmail(event.target.value);
-      };
-    
-      const handlePassword = (event) => {
-        setPassword(event.target.value);
-      };
-    
-      const handleSubmit = async (event) => {
-        try {
-          event.preventDefault();
-          const userData = {
-            email,
-            password,
-          };
-    
-          await validationSchema.validate(userData, {
-            abortEarly: false,
-          });
-         
-          clear();
-
-        } catch (err) {
-          setError(err.response ? err.response.data.message : err.errors[0]);
-    
-        }
-      };
-
-
-return (
-    <div id='root'>
-      <div id='img'>
-        {/* <SearchImg id='logo' width="250" /> */}
-      </div>
-      <div id='formSection'>
-        <Typography id='header'>
-          Sign In
-        </Typography>
-        <form id='form'>
-          <Input
-           id='input'
-            variant="outlined"
-            onChange={handleEmail}
-            value={email}
-            type="email"
-            label="Email"
-            required
-          />
-          <Input
-            type="password"
-            id='inputt'
-            variant="outlined"
-            onChange={handlePassword}
-            value={password}
-            label="Password"
-            required
-          />
-          <Snackbar open={open} autoHideDuration={8000} onClose={handleClose}>
-            <Alert onClose={handleClose} severity="success">
-              Login Successfully!
-            </Alert>
-          </Snackbar>
-        
-          <Button
-            id='button'
-            variant="contained"
-            color="primary"
-            onClick={handleSubmit}
-          >
-            Sign In
-          </Button>
-        </form>
-      </div>
+  const initialValues = {  email: "", password: "" };
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+  };
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValues);
+    }
+  }, [formErrors]);
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!values.email) {
+      errors.email = "Email is required!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "This is not a valid email format!";
+    }
+    if (!values.password) {
+      errors.password = "Password is required";
+    } else if (values.password.length < 5) {
+      errors.password = "Password must be more than 5 characters";
+    } else if (values.password.length > 10) {
+      errors.password = "Password cannot exceed more than 10 characters";
+    }
+    return errors;
+  };
+  return (
+    <div className="container">
+      {Object.keys(formErrors).length === 0 && isSubmit ? (
+        <div className="ui message success">Signed in successfully</div>
+      ) : (
+        <pre>{JSON.stringify()}</pre>
+      )}
+      <form onSubmit={handleSubmit} className="form">
+      {/* < img src={image} className="img"/> */}
+      <diV className="signin-continar">
+        <h1 >Sign in</h1>
+        <div className="ui divider"></div>
+        <div className="ui form">
+          <div className="field">
+            {/* <label>Email</label> */}
+            <input
+              type="text"
+              name="email"
+              placeholder="Email..."
+              value={formValues.email}
+              onChange={handleChange}
+              className="ii"
+            />
+          </div>
+          <p>{formErrors.email}</p>
+          <div className="field">
+            {/* <label>Password</label> */}
+            <input
+              type="password"
+              name="password"
+              placeholder="Password..."
+              value={formValues.password}
+              onChange={handleChange}
+              className="ii"
+            />
+          </div>
+          <p>{formErrors.password}</p>
+          <button className="buttonsubmit" >Sign in</button>
+          <div className="signup-text">
+              Don't have an account? <a href="#" className="buttontext">Sign Up</a>
+            </div>
+        </div>
+        </diV>
+      </form>
     </div>
   );
-          }
-export default Login;          
-
+}
+export default Login;
