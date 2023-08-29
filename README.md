@@ -19,5 +19,8 @@ Build a house-hunting application that facilitates users to rent houses, most of
 # User Journey ✈️
 As a user, I can see all available houses that able to rent, search to find houses  inside my profile I have my information and control panel for my own houses available to rent.
 
+# Prototype 🎨
+<https://www.figma.com/file/XFKuibAvCSjZJXO6YuRM1L/House-Hunting?type=design&node-id=0%3A1&mode=design&t=gkD1OI0VscSVUkTc-1>
+
 
 
