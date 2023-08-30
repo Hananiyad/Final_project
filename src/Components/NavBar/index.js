@@ -34,8 +34,11 @@ function NavBar() {
 
   const handleSignUp = () => {
     navigate('/register');
+   
+  }
+  const handleSignin = () => {
+    
     navigate('/Login');
-
   }
 
   
@@ -135,7 +138,7 @@ function NavBar() {
           <Button variant="outlined" id="btn" onClick = {handleSignUp} > Sign Up
            
             </Button>
-          <Button variant="contained" id="btn1"  onClick = {handleSignUp}> Sign In
+          <Button variant="contained" id="btn1"  onClick = {handleSignin}> Sign In
           </Button>
        
         </Toolbar>

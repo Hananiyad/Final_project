@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-// import image from '../../Components/Utilis/images/signin.png';
-import './style.css';
+import { useNavigate } from "react-router-dom";import './style.css';
 function Login() {
+  const navigate = useNavigate();
   const initialValues = {  email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -9,6 +9,9 @@ function Login() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
+  };
+  const handleSignUp = (event) => {
+    navigate("/register");
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +49,7 @@ function Login() {
         <pre>{JSON.stringify()}</pre>
       )}
       <form onSubmit={handleSubmit} className="form">
-      {/* < img src={image} className="img"/> */}
+ 
       <diV className="signin-continar">
         <h1 >Sign in</h1>
         <div className="ui divider"></div>
@@ -77,7 +80,7 @@ function Login() {
           <p>{formErrors.password}</p>
           <button className="buttonsubmit" >Sign in</button>
           <div className="signup-text">
-              Don't have an account? <a href="#" className="buttontext">Sign Up</a>
+              Don't have an account? <a href="#" className="buttontext" onClick={handleSignUp}>Sign Up</a>
             </div>
         </div>
         </diV>

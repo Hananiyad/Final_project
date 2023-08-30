@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  color: #1D5D9B;
+  color: #A78777;
 }
 .ui{
   display: flex;
@@ -28,7 +28,7 @@ p {
   color: red;
 }
 .buttonsubmit{
-  background-color:#1D5D9B;
+  background-color:#EB9235;
   border: none;
   border-radius: 30px;
   color:#fff !important;
@@ -42,5 +42,5 @@ p {
   color: #1A1A1A;
 }
 .buttontext{
-  color:#1D5D9B;
+  color:#EB9235;
 }
