@@ -11,7 +11,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import './style.css';
-const pages = ['Home', 'About Us', 'Content Us'];
+const pages = ['Home', 'About Us', 'Content s'];
 
 
 function NavBar() {
