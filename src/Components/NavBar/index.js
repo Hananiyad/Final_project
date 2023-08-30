@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import './style.css';
 const pages = ['Home', 'About Us', 'Content Us'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 function NavBar() {
     const navigate = useNavigate();
@@ -28,12 +28,10 @@ function NavBar() {
   };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    navigate('/about');
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+
   const handleSignUp = () => {
     navigate('/register');
     navigate('/Login');
@@ -97,7 +95,7 @@ function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu} >
-                  <Typography textAlign="center" id='nav'>{page}</Typography>
+                  <Typography textAlign="center"color={'black'}  id='nav'>{page}</Typography>
                 </MenuItem>
                 
               ))}
@@ -135,10 +133,9 @@ function NavBar() {
             ))}
           </Box>
           <Button variant="outlined" id="btn" onClick = {handleSignUp} > Sign Up
-            {/* <Link to ='/login'></Link> */}
+           
             </Button>
           <Button variant="contained" id="btn1"  onClick = {handleSignUp}> Sign In
-            {/* <Link to ='/register'></Link> */}
           </Button>
        
         </Toolbar>

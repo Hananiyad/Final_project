@@ -1,0 +1,30 @@
+#containerRoot{
+    padding-block: 5em;
+    padding-inline: 2em;
+    width: 85%;
+    min-height: 600px;
+}
+#imageContainer{
+    display: flex;
+    align-items: center;
+}
+#imge{
+    max-width: 100%;
+}
+#aboutUsArticle {
+    padding-inline: 5em;
+}
+#h2t{
+    font-size: 2.2em;
+    font-weight: bold;
+    padding-block:2em;
+    color:rebeccapurple;
+}
+#differentArticle{
+    padding-inline: 5em;
+}
+#typ{
+    font-size: 2em;
+    padding-block: 2em;
+    color: blue
+}

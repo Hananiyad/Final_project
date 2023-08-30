@@ -1,14 +1,9 @@
 import React,{useState,useEffect} from 'react';
 import FormControl from '@mui/material/FormControl';
-import InputBase from '@mui/material/InputBase';
 import Button from '@mui/material/Button';
 import { TextField,Slider } from '@mui/material';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import CardContainer from '../../Components/CardContainer';
 import FormLabel from '@mui/material/FormLabel';
-
 import './style.css'
 
 const SearchBar =()=>{
@@ -51,8 +46,7 @@ const SearchBar =()=>{
       const filteredHouses = housesData.filter((house) =>
           (bedroom ? house.bedroom === +bedroom : true))
           .filter((house) => (bathroom ? house.bathroom === +bathroom : true))
-          .filter((house) => (selectedType === '' ? house.category === selectedType : true))
-          .filter((house) => (price === undefined ? house.price === +price : true))
+          .filter((house) => (price === '' ? house.price === +price : true))
           .filter((house) => (location? house.location.toLowerCase().includes(location.toLowerCase()) : true));
       setFilteredHouses(filteredHouses);
             console.log(filteredHouses, 98984);
@@ -71,6 +65,9 @@ const SearchBar =()=>{
   const handleBathroomChange = (event) => {
       setBathroom(event.target.value);
   };
+  const handleLocationChange = (event) => {
+    setLocation(event.target.value);
+};
   const handlePriceChange = (event) => {
     const newValue = parseInt(event.target.value);
     setPrice(newValue)
@@ -88,13 +85,11 @@ const SearchBar =()=>{
                         placeholder="Location "
                         inputProps={{ 'aria-label': 'search google maps' }}
                         value={location} 
-                        onChange={(event) => setLocation(event.target.value)}
+                        onChange={handleLocationChange}
                         id='loc' 
                     />
              
-                   
-              
-
+     
             </div>
             <div  id='textf'>
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -105,7 +100,7 @@ const SearchBar =()=>{
                         type='number'
                         onChange={handleBedroomChange}
                         displayEmpty
-                        id='bed'
+                        id='bedd'
                     />
                 </FormControl>
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -120,24 +115,6 @@ const SearchBar =()=>{
                     />
                 </FormControl>
 
-
-                <FormControl sx={{ marginLeft: '20px' }}>
-                  <FormLabel style={{color: '#FF8243',}}>Select Category:</FormLabel>
-                    <RadioGroup
-                        aria-labelledby="demo-radio-buttons-group-label"
-                        value={selectedType}
-                        onChange={(event) => setSelectedType(event.target.value)}
-                        style={{
-                            width:'auto',
-                            height:'auto',
-                            display:'flex',
-                            flexWrap:'nowrap',
-                            flexDirection:'row'
-                        }}>
-                        <FormControlLabel value="Apartment" control={<Radio />} label="Apartment" />
-                        <FormControlLabel value="Roof" control={<Radio />} label="Roof" />
-                    </RadioGroup>
-                </FormControl>
 
 
                 <FormControl sx={{ marginLeft: '20px' }}>
@@ -182,7 +159,7 @@ const SearchBar =()=>{
                     Search
                     </Button> 
                  
-            <div>
+            <div id='cardcon'>
                <CardContainer houses={filteredHouses} />
             </div>
         </div>

@@ -22,7 +22,7 @@ const Landing =()=>{
     return(
       <>
      <div id='hearder'>
-      {console.log(houses, "hhoi")}
+      
      <Typography  variant="h3"
       component="h2"
        textAlign="center"
@@ -36,7 +36,7 @@ const Landing =()=>{
               Top-Rated
               </Typography>
               <CardContainer
-                  houses={houses.sort((a, b) => a.rating - b.rating)}
+                  houses={houses}
                 />
               </div>
               

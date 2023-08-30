@@ -70,6 +70,7 @@
  }
 #title{
     font-size: 20px;
+    color: #7D7D7D;
 }
   span{
     display: flex;
@@ -81,12 +82,15 @@
         color: #344F96;
     }
   #descDetails{
+    color: #7D7D7D;
     padding: 1em 0;
     width: 85%;
   }
+
   #descAddress,p{
      
       padding-top: 10px;
+      color: #7D7D7D;
 
   }
   #descBtn{

@@ -13,7 +13,7 @@ import BathtubIcon from '@mui/icons-material/Bathtub';
 import BedIcon from '@mui/icons-material/Bed';
 import AddIcon from '@mui/icons-material/Add';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-// import RelatedHouse from './RelatedHouse';
+
 import { Link } from 'react-router-dom';
 
 import './style.css'
@@ -63,11 +63,13 @@ fetch(`https://my-json-server.typicode.com/ansam-mohammed/api/houses/${id}`)
                 {houses.description}
               </Typography>
               <div id='continer'>
-             <Typography id="title"> <BathtubIcon id='bath'/> bathroom: {houses.bathroom}</Typography>
-              <Typography id="title"> <BedIcon id='bath'/> bedroom: {houses.bedroom}</Typography>
+             <Typography id="title"> 
+             <BathtubIcon id='bath'/> bathroom:  {houses.bathroom}</Typography>
+              <Typography id="title">
+                 <BedIcon id='bath'/> bedroom:   {houses.bedroom}</Typography>
               </div>
               <div id='descAddress'>
-                <Typography>
+                <Typography style={{color:'#7D7D7D'}}>
                 <AccountCircleIcon id='account'/>  Hanan Iyad ALFere </Typography>
                 <Typography>
                   <MarkEmailReadIcon id='account' /> alfrhnan@gmail.com
@@ -82,7 +84,7 @@ fetch(`https://my-json-server.typicode.com/ansam-mohammed/api/houses/${id}`)
                     variant="contained"
                     color="primary"
                     id='favriteBtn'
-                    // onClick={addToFavorite}
+                  
                   >
                   
                       <>

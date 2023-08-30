@@ -4,6 +4,11 @@
     margin: 30px  100px ;
 
   }
+  #cardcon{
+    margin-top: 40px;
+
+  }
+ 
   #containerr{
       width: 70%;
       margin: auto;
@@ -18,7 +23,7 @@
     
     
   }
-  #bed{
+  #bedd{
     border: 2px solid #9A9A9A;
   }
   #textf{
